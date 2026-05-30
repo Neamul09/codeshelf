@@ -132,47 +132,47 @@ button, input, select {
 
 /* Premium Creator Announcement Bar */
 .creator-announcement-bar {
-  background: linear-gradient(90deg, rgba(99, 102, 241, 0.08), rgba(236, 72, 153, 0.08));
+  background: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
-  padding: 0.5rem 1rem;
+  padding: 0.35rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-secondary);
   position: relative;
   overflow: hidden;
-  z-index: 101;
+  z-index: 105;
   animation: slideDownFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.creator-announcement-bar::before {
+.creator-announcement-bar::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -50%;
+  bottom: 0;
+  left: 0;
   width: 200%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-  animation: shineStrip 6s infinite linear;
-}
-
-[data-theme="dark"] .creator-announcement-bar::before {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+  background-size: 50% 100%;
+  animation: borderGlow 4s infinite linear;
 }
 
 .announcement-content {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
   position: relative;
   z-index: 2;
+  white-space: nowrap;
 }
 
 .announcement-content svg {
   color: var(--primary);
-  animation: floatMinor 3s ease-in-out infinite;
+  animation: spinMinor 6s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .creator-link {
@@ -182,32 +182,17 @@ button, input, select {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: relative;
-  transition: all var(--transition-fast);
+  transition: opacity var(--transition-fast);
 }
 
-.creator-link::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: -1px;
-  left: 0;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.creator-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.creator-link:hover {
+  opacity: 0.8;
 }
 
 .heart-pulse {
   display: inline-block;
-  color: #ef4444;
-  animation: pulseMinor 1.5s infinite;
+  color: #f43f5e;
+  animation: pulseMinor 1.2s infinite;
 }
 
 /* Announcement Animations */
@@ -222,19 +207,30 @@ button, input, select {
   }
 }
 
-@keyframes shineStrip {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+@keyframes borderGlow {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
 }
 
-@keyframes floatMinor {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
+@keyframes spinMinor {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes pulseMinor {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.25); }
+  50% { transform: scale(1.3); }
+}
+
+@media (max-width: 480px) {
+  .creator-announcement-bar {
+    padding: 0.3rem 0.5rem;
+  }
+  
+  .announcement-content {
+    font-size: 0.65rem;
+    gap: 0.35rem;
+  }
 }
 
 /* Floating Glass Navbar */
@@ -937,7 +933,7 @@ button, input, select {
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px);
-  z-index: 200;
+  z-index: 2000;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-normal);
@@ -951,20 +947,21 @@ button, input, select {
 .shelf-drawer {
   position: fixed;
   top: 0;
-  right: -420px;
+  right: 0;
   width: 420px;
   max-width: 100%;
   height: 100vh;
   background: var(--bg-secondary);
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
-  z-index: 201;
+  z-index: 2001;
   display: flex;
   flex-direction: column;
-  transition: right var(--transition-normal) cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(100%);
+  transition: transform var(--transition-normal) cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .shelf-drawer.open {
-  right: 0;
+  transform: translateX(0);
 }
 
 .drawer-header {
@@ -1397,11 +1394,6 @@ button, input, select {
   
   .shelf-drawer {
     width: 100% !important;
-    right: -100% !important;
-  }
-  
-  .shelf-drawer.open {
-    right: 0 !important;
   }
 
   /* Force strictly 2 book covers in a row on all screen sizes below 768px! */
