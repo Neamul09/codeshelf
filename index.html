@@ -38,18 +38,23 @@
         <span>CodeShelf</span>
       </div>
 
-      <!-- Centered Interactive Search Bar -->
-      <div class="nav-search-bar">
-        <input type="text" id="search-bar" class="search-input" placeholder="Search title, author, or keyword..." autocomplete="off">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <!-- Centered Interactive Search Bar & Custom Select Dropdown Group -->
+      <div class="nav-controls-group">
+        <div class="nav-search-bar">
+          <input type="text" id="search-bar" class="search-input" placeholder="Search title, author, or keyword..." autocomplete="off">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+
+        <div class="custom-select-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages select-lang-icon"><path d="m5 8 6 6"/><path d="m4 14 6-6"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+          <select id="language-select" class="lang-selector" aria-label="Select Library Language">
+            <option value="en" selected>English (EN)</option>
+          </select>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down select-arrow-icon"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
       </div>
 
       <div class="nav-actions">
-        <!-- Language Dropdown Selection -->
-        <select id="language-select" class="lang-selector" aria-label="Select Library Language">
-          <option value="en" selected>English (EN)</option>
-        </select>
-
         <!-- Personal Instagram Link (Neamul Morshed Neon) -->
         <a href="https://instagram.com/neamul.morshed" target="_blank" rel="noopener noreferrer" class="nav-btn" title="Developer Instagram: neamul.morshed" aria-label="Instagram Link">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
