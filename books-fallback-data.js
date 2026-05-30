@@ -216,6 +216,669 @@ window.CODELIB_DATABASE = {
   ],
   "resources": [
     {
+          "id": "b-csref-1",
+          "title": "Computer organization and architecture : designing for performance",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(1).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-2",
+          "title": "Introduction to Algorithms",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(2).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-3",
+          "title": "Fundamentals of Database Systems",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(3).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-4",
+          "title": "Computer Graphics, C Version",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(4).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-5",
+          "title": "CSE 143 Lecture 5: More Stacks and Queues; Complexity (Big-Oh)",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(5).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-6",
+          "title": "Advanced .NET Debugging",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(6).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-7",
+          "title": "Advanced windows debugging",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(7).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-8",
+          "title": "Artificial intelligence",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(8).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-9",
+          "title": "C: The Complete Reference",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(9).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-10",
+          "title": "C: An Advanced Introduction",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(10).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-11",
+          "title": "CLR via C#",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(11).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-12",
+          "title": "Compilers. Principles, Techniques, & Tools",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(12).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-13",
+          "title": "Software Engineering: A Practitioner's Approach",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(13).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-14",
+          "title": "Data Communications And Networking",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(14).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-15",
+          "title": "Domain-Driven Design Quickly",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(15).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-16",
+          "title": "Systems programming",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(16).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-17",
+          "title": "Essential Scrum",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(17).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-18",
+          "title": "Expert C Programming: Deep C Secrets",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(18).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-19",
+          "title": "Expert Python Programming",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(19).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-20",
+          "title": "Head First Python",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(20).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-21",
+          "title": "Java: The Complete Reference",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(21).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-22",
+          "title": "Jumping into C++",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(22).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-23",
+          "title": "Mobile Communications",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(24).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-24",
+          "title": "Distributed Process Management",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(25).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-25",
+          "title": "The Data Compression Book",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(26).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-26",
+          "title": "HTML: Pocket Reference",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(27).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-27",
+          "title": "IPv6 Essentials",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(28).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-28",
+          "title": "JavaScript Application Cookbook",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(29).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-29",
+          "title": "Learning Oracle PL/SQL",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(30).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-30",
+          "title": "Learning Python",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(32).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-31",
+          "title": "Learning the UNIX Operating System",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(33).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-32",
+          "title": "Learning the vi and Vim Editors",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(34).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-33",
+          "title": "Learning the vi Editor",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(35).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-34",
+          "title": "Alphabetical Directory of Linux Commands",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(36).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-35",
+          "title": "Linux Network Administrator's Guide",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(37).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-36",
+          "title": "Linux Networking Cookbook",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(38).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-37",
+          "title": "Hacker's Delight",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(39).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-38",
+          "title": "Mastering Regular Expressions",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(40).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-39",
+          "title": "MySQL Cookbook",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(41).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-40",
+          "title": "MySQL: Pocket Reference",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(42).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-41",
+          "title": "Practical C++ Programming",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(43).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-42",
+          "title": "Python & XML",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(44).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-43",
+          "title": "Python for Unix and Linux System Administration",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(46).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-44",
+          "title": "Real World Instrumentation with Python",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(47).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-45",
+          "title": "Ruby in a Nutshell",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(48).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-46",
+          "title": "Running Linux",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(49).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-47",
+          "title": "sed & awk",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(50).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-48",
+          "title": "Server Load Balancing",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(51).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-49",
+          "title": "SSH, The Secure Shell: The Definitive Guide",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(52).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-50",
+          "title": "The Productive Programmer",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(54).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
+          "id": "b-csref-51",
+          "title": "Understanding the Linux Kernel",
+          "url": "https://github.com/manjunath5496/Computer-Science-Reference-Books/blob/master/comp(56).pdf",
+          "author": "manjunath5496 (Reference Catalog)",
+          "formats": [
+                "PDF"
+          ],
+          "category": "Computer Science",
+          "subcategory": "Reference Books",
+          "lang": "en",
+          "type": "Books"
+    },
+    {
       "id": "b-3dxbp7q",
       "title": "احترف الأردوينو",
       "url": "https://www.ev-center.com/uploads/2/1/2/6/21261678/arduino.pdf",
