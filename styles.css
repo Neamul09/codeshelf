@@ -912,6 +912,21 @@ button, input, select {
   align-items: center;
 }
 
+.fav-item-link {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.fav-item-link:hover {
+  transform: translateX(4px);
+}
+
 .fav-item-cover-mini {
   width: 45px;
   height: 60px;
@@ -1276,6 +1291,10 @@ button, input, select {
   .shelf-drawer {
     width: 100% !important;
     right: -100% !important;
+  }
+  
+  .shelf-drawer.open {
+    right: 0 !important;
   }
 
   /* Force strictly 2 book covers in a row on all screen sizes below 768px! */
