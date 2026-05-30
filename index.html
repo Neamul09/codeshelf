@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeShelf | Premium Digital Library for Developers</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover thousands of free programming and computer science books, cheat sheets, and courses. Fully searchable, dynamically parsed, and beautifully cataloged.">
+  <meta name="keywords" content="free programming books, learning programming, developer library, cheat sheets, online courses, computer science ebooks">
+  <meta name="author" content="CodeShelf Team">
+  
+  <!-- Favicon (glowing SVG Book icon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236366f1' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5v-15a2.5 2.5 0 0 1 2.5-2.5H20v20H6.5a2.5 2.5 0 0 0-2.5 2.5z'%3E%3C/path%3E%3Cpath d='M6 6h10'%3E%3C/path%3E%3Cpath d='M6 10h10'%3E%3C/path%3E%3Cpath d='M6 14h10'%3E%3C/path%3E%3C/svg%3E">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Hidden SVG gradients definition for branding -->
+  <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+    <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="var(--primary)" />
+      <stop offset="100%" stop-color="var(--secondary)" />
+    </linearGradient>
+  </svg>
+
+  <div class="app-container">
+    
+    <!-- Floating Glass Header Navbar -->
+    <header class="navbar" id="top-nav">
+      <div class="nav-brand" id="brand-logo" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span>CodeShelf</span>
+      </div>
+
+      <!-- Centered Interactive Search Bar -->
+      <div class="nav-search-bar">
+        <input type="text" id="search-bar" class="search-input" placeholder="Search title, author, or keyword..." autocomplete="off">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Language Dropdown Selection -->
+        <select id="language-select" class="lang-selector" aria-label="Select Library Language">
+          <option value="en" selected>English (EN)</option>
+        </select>
+
+        <!-- Personal Instagram Link (Neamul Morshed Neon) -->
+        <a href="https://instagram.com/neamul.morshed" target="_blank" rel="noopener noreferrer" class="nav-btn" title="Developer Instagram: neamul.morshed" aria-label="Instagram Link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+
+        <!-- Personal GitHub Link (Neamul Morshed Neon) -->
+        <a href="https://github.com/Neamul09" target="_blank" rel="noopener noreferrer" class="nav-btn" title="Developer GitHub: Neamul09" aria-label="GitHub Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+
+        <!-- Favorites Panel Trigger -->
+        <button id="favorites-trigger" class="nav-btn" aria-label="Open Favorites Shelf" title="My Shelf">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+          <span id="favorites-badge" class="badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Dark/Light Switch Button -->
+        <button id="theme-toggle" class="nav-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <!-- Moon Icon (shows in light mode) -->
+          <svg id="theme-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <!-- Sun Icon (shows in dark mode) -->
+          <svg id="theme-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+
+        <!-- Dynamic Menu icon for smaller devices to trigger side panel -->
+        <button id="mobile-sidebar-toggle" class="nav-btn" style="display: none;" aria-label="Toggle Navigation Categories">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Wrapper Grid -->
+    <div class="main-wrapper">
+      
+      <!-- Category Navigation Sidebar -->
+      <aside class="sidebar" id="sidebar-panel">
+        <div>
+          <h2 class="sidebar-title">Categories</h2>
+          <ul class="category-list" id="category-container">
+            <!-- Dynamically populated from JS -->
+            <li class="category-item active">
+              <span>All Subjects</span>
+              <span class="category-count">0</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Content Area -->
+      <main class="content-area">
+        
+        <!-- Interactive Hero Grid Banner -->
+        <section class="hero-section" id="hero-banner">
+          <div class="hero-glow"></div>
+          <div class="hero-tag">CC-BY-4.0 Licensed</div>
+          <h1 class="hero-title">Unlock Thousands of <span>Free Programming Books</span></h1>
+          <p class="hero-desc">Empowering developers around the globe with high-quality, free programming manuals, cheat sheets, podcasts, and computer science educational resources. Completely open-source.</p>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-val" id="stat-books-count">8,000+</span>
+              <span class="stat-lbl">Free Books</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" id="stat-languages-count">45+</span>
+              <span class="stat-lbl">Global Languages</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">100%</span>
+              <span class="stat-lbl">Free & Open</span>
+            </div>
+          </div>
+          
+          <button id="surprise-trigger" class="surprise-btn" title="Get a random curated book recommendation!">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shuffle"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.2 0 2.3.6 3 1.7l1.1 1.6"/><path d="m15.4 12.8 1.2 1.7c.8 1.1 2 1.7 3.2 1.7H22"/><path d="m18 14 4 4-4 4"/></svg>
+            <span>Surprise Me!</span>
+          </button>
+        </section>
+        
+        <!-- Dynamic Resource Types Navigation Bar -->
+        <div class="resource-types-bar" id="resource-types-container">
+          <button class="type-btn active" data-type="Books">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span>Books</span>
+          </button>
+          <button class="type-btn" data-type="Courses">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/><path d="M21.5 12v6"/></svg>
+            <span>Courses</span>
+          </button>
+          <button class="type-btn" data-type="Cheat Sheets">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll"><path d="M8 21h12a2 2 0 0 0 2-2v-2H10v2a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v3h4"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/></svg>
+            <span>Cheat Sheets</span>
+          </button>
+          <button class="type-btn" data-type="Interactive Tutorials">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+            <span>Interactive</span>
+          </button>
+          <button class="type-btn" data-type="Playgrounds">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+            <span>Playgrounds</span>
+          </button>
+          <button class="type-btn" data-type="Podcasts & Screencasts">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mic"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+            <span>Podcasts</span>
+          </button>
+          <button class="type-btn" data-type="Problem Sets">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+            <span>Problem Sets</span>
+          </button>
+        </div>
+
+        <!-- Advanced Filter & Sort Control Panel -->
+        <div class="control-panel">
+          <div class="results-count" id="books-results-count">
+            Showing <span>0</span> books
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">Format:</span>
+            <button class="filter-pill active" data-filter="all">All Types</button>
+            <button class="filter-pill" data-filter="pdf">PDF</button>
+            <button class="filter-pill" data-filter="html">Web/HTML</button>
+            <button class="filter-pill" data-filter="epub">eBook (EPUB/MOBI)</button>
+          </div>
+
+          <div>
+            <select id="sorter-select" class="sorter-select" aria-label="Sort books listing">
+              <option value="alphabetical" selected>Sort: Alphabetical (A-Z)</option>
+              <option value="random">Sort: Shuffle Random</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Book Display Cards Grid -->
+        <div class="book-grid" id="book-grid-container">
+          <!-- Dynamically populated, shows shimmers as initial state -->
+          <div class="shimmer-card">
+            <div class="shimmer-element shimmer-cover"></div>
+            <div class="shimmer-element shimmer-title"></div>
+            <div class="shimmer-element shimmer-author"></div>
+          </div>
+          <div class="shimmer-card">
+            <div class="shimmer-element shimmer-cover"></div>
+            <div class="shimmer-element shimmer-title"></div>
+            <div class="shimmer-element shimmer-author"></div>
+          </div>
+          <div class="shimmer-card">
+            <div class="shimmer-element shimmer-cover"></div>
+            <div class="shimmer-element shimmer-title"></div>
+            <div class="shimmer-element shimmer-author"></div>
+          </div>
+          <div class="shimmer-card">
+            <div class="shimmer-element shimmer-cover"></div>
+            <div class="shimmer-element shimmer-title"></div>
+            <div class="shimmer-element shimmer-author"></div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- Sliding Sidebar Favorites Drawer -->
+    <div class="drawer-backdrop" id="shelf-backdrop"></div>
+    <div class="shelf-drawer" id="shelf-container">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark-check"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v11"/><path d="m15 10 2 2 4-4"/></svg>
+          <span>My Code Shelf</span>
+        </div>
+        <div class="drawer-close-btn" id="shelf-close-trigger" aria-label="Close Favorites Shelf">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </div>
+      </div>
+      
+      <div class="drawer-content" id="shelf-drawer-items">
+        <!-- Dynamically rendered favorite items, or empty state -->
+        <div class="drawer-empty-state">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark-minus"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v11"/><line x1="15" x2="21" y1="10" y2="10"/></svg>
+          <p>Your bookshelf is currently empty.<br>Click the bookmark icon on any book to add it here!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Footer with Socials & Attributions -->
+    <footer class="app-footer">
+      <div class="footer-top">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <div class="footer-brand" style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800;">
+            CodeShelf
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-secondary); font-weight: 500;">
+            Developed by <span style="color: var(--primary); font-weight: 700;">Md. Neamul Morshed Neon</span><br>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">CS Undergrad, Bangladesh <3</span>
+          </div>
+        </div>
+        
+        <div class="footer-socials">
+          <!-- Neamul's Personal Instagram Link -->
+          <a href="https://instagram.com/neamul.morshed" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow Md. Neamul Morshed Neon on Instagram!" aria-label="Instagram Link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <!-- Neamul's Personal GitHub Link -->
+          <a href="https://github.com/Neamul09" target="_blank" rel="noopener noreferrer" class="social-link" title="Developer GitHub Profile" aria-label="GitHub Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom" style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.8rem; line-height: 1.5; color: var(--text-muted);">
+        <div>
+          CodeShelf is an independent interactive portal created by <strong style="color: var(--text-secondary);">Md. Neamul Morshed Neon</strong> to present programming learning lists in a premium modern design.
+        </div>
+        <div style="border-left: 3px solid var(--primary); padding-left: 0.75rem;">
+          <strong>Attribution & Licensing Notice:</strong> The catalog database of books, cheatsheets, courses, and podcasts loaded in this application is compiled and parsed directly from the outstanding lists maintained by the <a href="https://github.com/EbookFoundation/free-programming-books" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline; font-weight: 600;">EbookFoundation/free-programming-books</a> repository, administered by the <a href="https://ebookfoundation.org" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">Free Ebook Foundation</a>. 
+          The underlying library data is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline; font-weight: 600;">Creative Commons Attribution 4.0 International (CC BY 4.0) License</a>. 
+          Independently designed presentation modifications, client-side database compaction, and visual interfaces are made in compliance with attribution requirements.
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Fallback data & Main JavaScript App Logic -->
+  <script src="books-fallback-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
