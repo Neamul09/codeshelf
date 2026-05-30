@@ -422,6 +422,42 @@ button, input, select {
   animation: popScale 0.3s ease;
 }
 
+/* Pulsing glow indicator for category menu */
+.pulse-indicator {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  border: 1.5px solid var(--bg-secondary);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+.pulse-indicator::after {
+  content: '';
+  position: absolute;
+  top: -1.5px;
+  left: -1.5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--primary);
+  animation: rippleGlow 2s infinite ease-out;
+}
+
+@keyframes rippleGlow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
 /* Dropdowns in navbar */
 .lang-selector {
   padding: 0.6rem 1rem;
